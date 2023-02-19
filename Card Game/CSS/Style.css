@@ -1,0 +1,261 @@
+:root {
+    --clr-backgrounds: rgba(255, 255, 255, 0.8);
+    --box-shadow--containers: 0.3125em 0.5em 0.5625em rgba(0, 0, 0, 0.43);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("../Fonts/Roboto/Roboto-Bold.ttf");
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    40% {
+        opacity: 0.4;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.mainContainer {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-image: url("../Images/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -2;
+}
+
+.gameButtons { 
+    width: 22.22222222222222em;
+    height: 2.7777777777777777em;
+    border-radius: 0.5555555555555556em;
+    padding: 0;
+    background: var(--clr-backgrounds);
+    border: none;
+    box-shadow: 0.1388888888888889em 0.2222222222222222em 0.25em #0000006e;
+    color: #361157;
+    font-size: 2.25em;
+    line-height: 1.1666666666666667em;
+    text-transform: uppercase;
+    cursor: pointer;
+    animation: fadeIn 1s linear;
+}
+
+#tryAgainButton {
+    position: absolute;
+    top: 16.38888888888889em;
+}
+
+.scoresWrapper {
+    width: 12.5em;
+    height: 5em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--clr-backgrounds);
+    box-shadow: var(--box-shadow--containers);
+    border-radius: 0 0 1.25em 0;
+    text-align: center;
+    animation: fadeIn 1s linear;
+}
+
+.scoresWrapper #score,#highScore {
+    display: inline-block;
+    font-size: 1.375em;
+    line-height: 1.875rem;
+}
+
+#score {
+    margin: 0.625rem 1.125rem 0 1.125rem;
+}
+
+#highScore {
+    margin: 0 1.125rem 0.625rem 1.125rem;
+}
+
+.timerWrapper {
+    width: 62.5em;
+    height: 1.25em;
+    position: absolute;
+    top: 1.4375em;
+    background: var(--clr-backgrounds);
+    box-shadow: var(--box-shadow--containers);
+    border-radius: 10px;
+    animation: fadeIn 1s linear;
+}
+
+.timer {
+    width: 62.5em;
+    height: 1.25em;
+    position: absolute;
+    background: rgb(142, 68, 173);
+    border-radius: 10px;
+    transition: all 1s linear;
+}
+
+.restartButton {
+    width: 7.5em;
+    height: 6em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    padding: 0;
+    background: var(--clr-backgrounds);
+    box-shadow: var(--box-shadow--containers);
+    border-radius: 0 0 0 1.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: fadeIn 1s linear;
+}
+
+.cardsWrapper {
+    width: 78.125em;
+    height: 50em;
+    position: absolute;
+    top: 7.625em;
+    display: grid;     
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: repeat(3, auto);
+    align-content: center;
+    box-sizing: border-box;
+    padding: 0 4.0625em;
+    gap: 3.5em 2.5em;
+    background: var(--clr-backgrounds);
+    box-shadow: var(--box-shadow--containers);
+    border-radius: 0.625em;
+    perspective: 1000px;
+}
+
+.card {
+    position: relative;
+    width: 9.3125em;
+    height: 12.125em;
+    border-radius: 0.625em;
+    cursor: pointer;
+    transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+    animation: fadeIn 1s linear;
+    visibility: visible;
+}
+
+.cardBack, .cardFront {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.cardBack {
+    backface-visibility: hidden;
+}
+
+.cardFront {                    
+    transform: rotateY(180deg);
+}
+
+.cardToggle {
+    transform: rotateY(180deg);
+}
+
+.gameOverBackground {        
+    background: rgba(199, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.victoryBackground {
+    background-image: url(../Images/victoryBackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+#victory {
+    position: absolute;
+    top: 2.3125rem;
+    margin: 0;
+    color: rgb(122, 192, 43);
+    font-size: 6.25rem;
+    line-height:7.3125rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0.375rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s linear;
+}
+
+#gameOver {
+    position: absolute;
+    top: 15.3125rem;
+    margin: 0;
+    color: rgb(192, 57, 43);
+    font-size: 6.25rem;
+    line-height:7.3125rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0.375rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+.finalScore {
+    margin: 0;
+    position: absolute;
+    top: 24rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    text-align: center;
+    color: white;
+    animation: fadeIn 1s linear;
+}
+
+#winningScore {
+    top: 11rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.cardMatch {
+    visibility: hidden;
+    pointer-events: none;
+}

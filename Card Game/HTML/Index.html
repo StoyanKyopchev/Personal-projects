@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Card Game</title>
+        <link rel="stylesheet" href="../CSS/Style.css">
+    </head>
+
+    <body>
+        <main class="mainContainer">
+            <button class="gameButtons" id="startGame">start game</button>
+
+            <div class="scoresWrapper hidden">
+                <span id="score">Score: 0</span> <br>
+                <span id="highScore">High score: 0</span>
+            </div>
+
+            <div class="timerWrapper hidden">
+                <div class="timer"></div>
+            </div>
+
+            <button class="restartButton hidden">
+                <img src="../Images/restart 1.png"/>
+            </button>
+
+            <section class="cardsWrapper hidden"></section>
+
+            <span id="gameOver" class="hidden">game over</span>
+            <span id="losingScore" class="finalScore hidden"></span>
+            <button class="gameButtons hidden" id="tryAgainButton">try again</button>
+            <div class="gameOverBackground hidden"></div>
+
+            <span id="victory" class="hidden">congratulations, you won!&#129321;</span>
+            <span id="winningScore" class="finalScore hidden"></span>
+            <div class="victoryBackground hidden"></div>
+        </main>
+        <script src="../JS/Script.js"></script>
+    </body>
+</html>
