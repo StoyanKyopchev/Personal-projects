@@ -1,0 +1,182 @@
+* {
+    font-family: "Courier New", Courier, monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.mainContainer {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playerWrapper {
+    width: 28.125em;
+    height: 40.625em;
+    position: relative;
+}
+
+.playerTop {
+    height: 67.5%;
+    width: 100%;
+}
+
+.playerTop img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+    pointer-events: none;
+}
+
+.seekerWrapper {
+    height: 1.5%;
+    width: 100%;
+    background: #cacacac4;
+    cursor: pointer;
+}
+
+.seeker {
+    width: 0;
+    height: 100%;
+    border-radius: 0 15px 15px 0;
+    background: #38cafa;
+    pointer-events: none;
+}
+
+.playerBottom {
+    height: 31%;
+    width: 100%;
+    position: relative;
+    background: #464646;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+}
+
+.playerBottom > p {
+    margin: 0;
+}
+
+.songName {
+    font-size: 1.75rem;
+    color: #e9e9e9;
+    font-weight: 700;
+    padding-top: 0.75em;
+}
+
+.artistName {
+    font-size: 1.5rem;
+    color: #c5c5c5;
+    padding-bottom: 0.75em;
+}
+
+.playerControls {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #dddddd;
+    font-size: 2rem;
+}
+
+.playerControls:hover {
+    color: white;
+}
+
+.playerControlsActive {
+    color: white;
+}
+
+.playerBottom .playerControls:not(:nth-child(3)) {
+    padding: 0 0 0 1em;
+}
+
+.muteButton {                      
+    font-size: 1rem;
+    display: block;
+    position: absolute;
+    left: 32%;
+    margin-top: 0.7em;
+}
+
+.volumeWrapper {
+    width: 6.25em;
+    height: 0.3em;
+    background: #818181;
+    border-radius: 10px;
+    position: absolute;
+    left: 40%;
+    bottom: 21.5%;
+    cursor: pointer;
+}
+
+.volume {
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.playlistExpandButton {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    color: #dddddd;
+    background-color: #818181;
+    border: none;
+    cursor: pointer;
+}
+
+.playlistExpandButton--expanded {
+    bottom: 30em;
+}
+
+.playlist {
+    width: 100%;
+    height: 25em;
+    position: absolute;
+    bottom: 0;
+    background-color: #8181818b;
+    overflow-y: scroll;
+}
+
+.playlistInnerWrapper {
+    width: 100%;
+    height: 12.5%;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 0.3125em;
+}
+
+.playlistInnerWrapper:hover {
+    background-color: #f7f7f779;
+}
+
+.playlistInnerWrapper img {
+    height: 100%;
+}
+
+.playlistNumber {
+    padding-left: 0.625em;
+}
+
+.playListArtist {
+    padding-left: 0.3125em;
+}
+
+.hidden {
+    display: none;
+}

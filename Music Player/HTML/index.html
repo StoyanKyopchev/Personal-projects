@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Music Player</title>
+        <link rel="stylesheet" href="../CSS/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <main class="mainContainer">
+            <div class="playerWrapper">
+                <audio src="" class="audioSource"></audio>
+
+                <div class="playerTop">
+                    <img src="">
+                </div>
+
+                <div class="seekerWrapper">
+                    <div class="seeker"></div>
+                </div>
+
+                <div class="playerBottom">
+                    <p class="songName">Heat Waves</p>
+                    <p class="artistName">Glass Animals</p>
+                    
+                    <button class="playerControls backwardButton">
+                        <i class="fa fa-backward"></i>
+                    </button>
+
+                    <button class="playerControls playButton">
+                        <i class="fa fa-play"></i>
+                    </button>
+
+                    <button class="playerControls forwardButton">
+                        <i class="fa fa-forward"></i>
+                    </button>
+
+                    <button class="playerControls shuffleButton">
+                        <i class="fa fa-random"></i>
+                    </button>
+
+                    <button class="playerControls muteButton">
+                        <i class="fa fa-volume-up"></i>
+                    </button>
+
+                    <div class="volumeWrapper">
+                        <div class="volume"></div>
+                    </div>
+
+                    <button class="playlistExpandButton">
+                        <i class="fa fa-chevron-up"></i>
+                    </button>
+
+                    <div class="playlist hidden"></div>
+                </div>
+            </div>
+        </main>
+        <script src="../JS/script.js"></script>
+    </body>
+</html>
